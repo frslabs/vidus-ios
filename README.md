@@ -82,15 +82,15 @@ class YourViewController: UIViewController {
 2. Initialize Vidus framework:
 ```swift
 
-/// - Parameters: input parameters
-///   - results: The results of the user capturing video with the camera.
+/// - Initialize Vidus SDK
+
      override func viewDidAppear(_ animated: Bool) {
        if inputParam.count > 0{
          VIDUS.initialize(caller: self, node: inputParam)
        }
    }
    
-   /// - Call following fuction on viewDidLoad for provide input to vidus framework
+/// - Call following fuction on viewDidLoad for provide input to vidus framework
    
    func addNodeWithParam(nodeName:String) {
        switch nodeName {
@@ -122,9 +122,9 @@ class YourViewController: UIViewController {
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParams)
         case VIDUS.VidusNodeName.videoWithCustomText.rawValue:
-        nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
-        nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-        inputParams.append(nodeParams)
+             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
+             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+             inputParams.append(nodeParams)
        default:
            print("Error: Node is empty")
        }
