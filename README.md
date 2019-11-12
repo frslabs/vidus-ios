@@ -121,7 +121,7 @@ class YourViewController: UIViewController {
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParams)
-        case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
+        case VIDUS.VidusNodeName.videoWithCustomText.rawValue:
         nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
         nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
         inputParams.append(nodeParams)
