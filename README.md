@@ -69,6 +69,10 @@ class YourViewController: UIViewController {
       addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVRecorderNode.rawValue)
       /// For osv challenge text node
       addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
+       /// For osv challenge text node
+      addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
+      /// For Video with Custom Text
+      addNodeWithParam(nodeName: VIDUS.VidusNodeName.videoWithCustomText.rawValue)
       /// Result
       addOutputObserver()
    }
@@ -117,6 +121,10 @@ class YourViewController: UIViewController {
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParams)
+        case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
+        nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
+        nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+        inputParams.append(nodeParams)
        default:
            print("Error: Node is empty")
        }
@@ -161,6 +169,8 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 5. **[OSV Recorder Node](#osv-recorder-node)** 
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
+
+7. **[Video With Custom Text](#Video With Custom Text)**
 
 The Input Nodes are explained below,
 
@@ -285,5 +295,25 @@ Captures a video recording with a user defined time.
  </tr>
 </table>
 </div>
+
+
+#### Video With Custom Text
+
+<div>
+<table style="width:100%">
+ <tr>
+ <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
+ </tr>
+ <tr>
+ <td><b>nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = </b>videoChallengeText</td>
+ <td>Sets the text that will be spoken.</td>
+ </tr>
+ <tr>
+ </tr>
+ <tr>
+ </tr>
+</table>
+</div>
+
 
 
