@@ -170,7 +170,9 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
-7. **[Video With Custom Text](#Video-With-Custom Text)**
+7. **[Video With Custom Text](#Video-With-Custom-Text)**
+
+
 
 The Input Nodes are explained below,
 
