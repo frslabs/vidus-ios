@@ -7,7 +7,6 @@ The Vidus SDK comes with a set of screens and configurations to record live vide
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Vidus Result](#vidus-result)
 - [Vidus Error Codes](#vidus-error-codes)
 - [Usage](#usage)
 
