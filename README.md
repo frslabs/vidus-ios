@@ -7,6 +7,8 @@ The Vidus SDK comes with a set of screens and configurations to record live vide
 - [Features](#features)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Vidus Result](#vidus-result)
+- [Vidus Error Codes](#vidus-error-codes)
 - [Usage](#usage)
 
 ## Features
@@ -153,6 +155,18 @@ class YourViewController: UIViewController {
 ## License
 
 Vidus is available under the FRSLABS commercial license. Write to support@frslabs.com to get your Licence Key and Netrc credentials.
+
+## Vidus Error Codes
+
+Following error codes will be returned on the `onVidusFailure` method of the callback
+
+| CODE | DESCRIPTION                  |
+| ---- | ---------------------------- |
+| 803  | Permission denied             |
+| 804  | SDK was interrupted       |
+| 805  | Vidus SDK License expired            |
+| 806  | Vidus SDK License was invalid |
+| 809  | No Internet Available   
 
 ## Vidus Parameters
 
