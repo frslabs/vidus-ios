@@ -140,13 +140,14 @@ class YourViewController: UIViewController {
        NotificationCenter.default.addObserver(
            self,
            selector: #selector(self.output),
-           name: NSNotification.Name(rawValue: NotificationName.output.description),
+           name: NSNotification.Name(rawValue: NotificationName.output.rawValue),
            object: nil)
       }
    @objc private func output(notification: NSNotification){
        if notification.object != nil{
            let result = notification.object as! SDKOutput
-           let videoPath = result.videoPath
+           let videoPath = result.VideoSDKResultURL
+           let ErrorCode = objectName.ErrorCode
        }
    
 ```
