@@ -326,15 +326,15 @@ Captures a video recording with a user defined time.
  </tr>
  <tr>
  <td><b>nodeParameters[VIDUS.VidusParameter.keyId.rawValue]</b></td>
- <td>dc1b2452-32fc-4d61-bd62-bc063591ec93.
+ <td>Set Credential1.
  </tr>
  <tr>
  <td><b>nodeParameters[VIDUS.VidusParameter.keySecret.rawValue]</b></td>
- <td>d1b4d787-7151-4980-9db2-ada3ecaa8c88.
+ <td>Set Credential2.
  </tr>
  <tr>
   <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue]</b></td>
- <td>https://play.clients.atlaskyc.com/ewt/api/v1.
+ <td>Vidus API Base URL.
  </tr>
  <tr>
  </tr>
