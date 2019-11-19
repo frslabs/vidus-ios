@@ -313,7 +313,7 @@ Captures a video recording with a user defined time.
  <td>Sets the text that will be spoken.</td>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue]</b> videoChallengeTextTime</td>
+ <td><b>nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = </b> videoChallengeTextTime</td>
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
  </br></br> Values should be between <b> 1 and 100 </b> </td>
  </tr>
