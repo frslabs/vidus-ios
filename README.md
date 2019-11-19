@@ -101,8 +101,8 @@ class YourViewController: UIViewController {
     // ...
     
     override func viewDidAppear(_ animated: Bool) {
-        if inputParam.count > 0{
-           VIDUS.initialize(caller: self, nodeParam: inputParam, licenceKey: "Enter lcence Key")
+        if inputParams.count > 0{
+           VIDUS.initialize(caller: self, nodeParam: inputParams, licenceKey: "Enter lcence Key")
         }
     }
     
@@ -170,8 +170,8 @@ class YourViewController: UIViewController {
     
     @objc private func output(notification: NSNotification){
         if notification.object != nil{
-            let result = notification.object as! SDKOutput
-            let videoPath = result.VideoSDKResultURL
+            let objectName = notification.object as! SDKOutput
+            let outputURL = objectName.VideoSDKResultURL
             let ErrorCode = objectName.ErrorCode
         }
     }
