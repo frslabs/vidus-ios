@@ -166,7 +166,10 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 804  | SDK was interrupted       |
 | 805  | Vidus SDK License expired            |
 | 806  | Vidus SDK License was invalid |
-| 809  | No Internet Available   
+| 807  | Invalid Config         |
+| 808  | Transaction Failed       |
+| 809  | No Internet Available             |
+  
 
 ## Vidus Parameters
 
