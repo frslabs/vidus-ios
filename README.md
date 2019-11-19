@@ -4,24 +4,18 @@
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
 
-- [Features](#features)
+# Table Of Content
+
 - [Requirements](#requirements)
 - [Installation](#installation)
 - [Vidus Error Codes](#vidus-error-codes)
 - [Usage](#usage)
-
-## Features
-
-- [x] Capture Video
-- [x] Add nodes to customise Video flow
-- [x] Compress recorded video
+- [Help](#help)
 
 ## Requirements
 
 - Swift 5.0
 - iOS 10.0+
-
-<br>
 
 ## Installation
 ### Cocoapods
@@ -310,8 +304,6 @@ Captures a video recording with a user defined time.
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
  </br></br> Values should be between <b> 1 and 100 </b> </td>
  </tr>
- <tr>
- </tr>
 </table>
 </div>
 
@@ -328,21 +320,12 @@ Captures a video recording with a user defined time.
  <td>Sets the text that will be spoken.</td>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.keyId.rawValue]</b></td>
- <td>Set Credential1.
- </tr>
- <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.keySecret.rawValue]</b></td>
- <td>Set Credential2.
- </tr>
- <tr>
-  <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue]</b></td>
+ <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue]</b></td>
  <td>Vidus API Base URL.
- </tr>
- <tr>
  </tr>
 </table>
 </div>
 
-
+## Help
+For any queries/feedback , contact us at `support@frslabs.com` 
 
