@@ -6,11 +6,21 @@ The Vidus SDK comes with a set of screens and configurations to record live vide
 
 # Table Of Content
 
+- [Prerequisite](#prerequisite)
 - [Requirements](#requirements)
 - [Installation](#installation)
+- [Getting Started](#getting-started)
+- [Vidus Parameters](#vidus-parameters)
 - [Vidus Error Codes](#vidus-error-codes)
-- [Usage](#usage)
 - [Help](#help)
+
+## Prerequisite
+
+You will need a valid license and Netrc credentials to use the Vidus SDK, which can be obtained by contacting support@frslabs.com .
+
+Depending on the license - offline or online - you have opted for, the ping functionality to billing servers will be disabled or enabled. For instance, if you have opted for the offline SDK model, then there will be no server ping needed to our billing server to bill you. However, if you have chosen a transaction based pricing, then after each transaction, a ping request will be made to our billing server. This cannot be overrided by the App. A point to note is that if the ping transaction fails for any reason, the whole transaction will be void without any results from the SDK.
+
+Once you have the license , follow the below instructions for a successful integration of Vidus SDK onto your iOS Application.
 
 ## Requirements
 
@@ -18,9 +28,8 @@ The Vidus SDK comes with a set of screens and configurations to record live vide
 - iOS 10.0+
 
 ## Installation
-### Cocoapods
 
-[CocoaPods](http://cocoapods.org) is a dependency manager for Cocoa projects.
+### Cocoapods
 
 To integrate **Vidus** into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
@@ -39,131 +48,136 @@ Then, run the following command:
 $ pod install
 ```
 
-## Usage
+## Getting Started
 
 ### Swift
 
-1. Make sure that you have created input parameter and node parameter:
+1. Initialize the input parameters including the `nodes` to be invoked
 
 ```swift
 class YourViewController: UIViewController {
+
     var inputParams = [[String : String]]()
     var nodeParams = [String : String]()
     
-   override func viewDidLoad() {
-      super.viewDidLoad()
-      /// For simple node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.simpleRecorderNode.rawValue)
-      /// For challenge text node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.challengeTextNode.rawValue)
-      /// For challenge code node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.challengeCodeNode.rawValue)
-      /// For declaration node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.declarationNode.rawValue)
-      /// For osv recorder node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVRecorderNode.rawValue)
-      /// For osv challenge text node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
-       /// For osv challenge text node
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
-      /// For Video with Custom Text
-      addNodeWithParam(nodeName: VIDUS.VidusNodeName.videoWithCustomText.rawValue)
-      /// Result
-      addOutputObserver()
-   }
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        // For simple node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.simpleRecorderNode.rawValue)
+        
+        // For challenge text node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.challengeTextNode.rawValue)
+        
+        // For challenge code node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.challengeCodeNode.rawValue)
+        
+        // For declaration node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.declarationNode.rawValue)
+        
+        // For osv recorder node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVRecorderNode.rawValue)
+        
+        // For osv challenge text node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
+        
+        // For osv challenge text node
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
+        
+        // For Video with Custom Text
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.videoWithCustomText.rawValue)
+        
+        // Result
+        addOutputObserver()
+    }
+    
+    // ...
 }
 ```
 
-2. Initialize Vidus framework:
+2. Invoke Vidus SDK
+
 ```swift
+    // ...
+    
+    override func viewDidAppear(_ animated: Bool) {
+        if inputParam.count > 0{
+            VIDUS.initialize(caller: self, node: inputParam)
+        }
+    }
+    
+    // ...    
+```
 
-/// - Initialize Vidus SDK
-
-     override func viewDidAppear(_ animated: Bool) {
-       if inputParam.count > 0{
-         VIDUS.initialize(caller: self, node: inputParam)
-       }
-   }
+3. Call following fuction on viewDidLoad for provide input to vidus framework
    
-/// - Call following fuction on viewDidLoad for provide input to vidus framework
-   
-   func addNodeWithParam(nodeName:String) {
-       switch nodeName {
-       case VIDUS.VidusNodeName.simpleRecorderNode.rawValue:
+```swift
+    // ...
+    
+    func addNodeWithParam(nodeName:String) {
+        switch nodeName {
+        case VIDUS.VidusNodeName.simpleRecorderNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.simpleRecorderNode.rawValue
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "8"
             inputParams.append(nodeParams)
-       case VIDUS.VidusNodeName.challengeCodeNode.rawValue:
+        case VIDUS.VidusNodeName.challengeCodeNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeCodeNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             inputParams.append(nodeParams)
-       case VIDUS.VidusNodeName.challengeTextNode.rawValue:
+        case VIDUS.VidusNodeName.challengeTextNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeTextNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "12"
             inputParams.append(nodeParams)
-       case VIDUS.VidusNodeName.declarationNode.rawValue:
+        case VIDUS.VidusNodeName.declarationNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.declarationNode.rawValue
             nodeParams[VIDUS.VidusParameter.voiceType.rawValue] = VIDUS.VidusVoiceType.byMacine.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             inputParams.append(nodeParams)
-       case VIDUS.VidusNodeName.oSVRecorderNode.rawValue:
+        case VIDUS.VidusNodeName.oSVRecorderNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVRecorderNode.rawValue
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "10"
             inputParams.append(nodeParams)
-       case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
+        case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParams)
         case VIDUS.VidusNodeName.videoWithCustomText.rawValue:
-             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
-             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-             inputParams.append(nodeParams)
-       default:
-           print("Error: Node is empty")
-       }
-   }
-
+            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
+            nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            inputParams.append(nodeParams)
+        default:
+            print("Error: Node is empty")
+        }
+    }
+    
+    // ...
 ```
 
-3. Finally, to get the output from Vidus framework, add the following function inside ViewController Class:
+4. Finally, to get the output from Vidus framework, add the following function inside ViewController Class:
 
 ```swift
-   func addOutputObserver(){
-       NotificationCenter.default.addObserver(
-           self,
-           selector: #selector(self.output),
-           name: NSNotification.Name(rawValue: NotificationName.output.rawValue),
-           object: nil)
-      }
-   @objc private func output(notification: NSNotification){
-       if notification.object != nil{
-           let result = notification.object as! SDKOutput
-           let videoPath = result.VideoSDKResultURL
-           let ErrorCode = objectName.ErrorCode
-       }
-   
+    // ...
+     
+    func addOutputObserver(){
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(self.output),
+            name: NSNotification.Name(rawValue: NotificationName.output.rawValue),
+            object: nil)
+    }
+    
+    @objc private func output(notification: NSNotification){
+        if notification.object != nil{
+            let result = notification.object as! SDKOutput
+            let videoPath = result.VideoSDKResultURL
+            let ErrorCode = objectName.ErrorCode
+        }
+    }
+    
+    // ...
 ```
-
-## License
-
-Vidus is available under the FRSLABS commercial license. Write to support@frslabs.com to get your Licence Key and Netrc credentials.
-
-## Vidus Error Codes
-
-Following error codes will be returned on the `onVidusFailure` method of the callback
-
-| CODE | DESCRIPTION                  |
-| ---- | ---------------------------- |
-| 803  | Permission denied             |
-| 804  | SDK was interrupted       |
-| 805  | Vidus SDK License expired            |
-| 806  | Vidus SDK License was invalid |
-| 807  | Invalid Config         |
-| 808  | Transaction Failed       |
-| 809  | No Internet Available             |
-  
 
 ## Vidus Parameters
 
@@ -182,7 +196,6 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
 7. **[Video With Custom Text](#Video-With-Custom-Text)**
-
 
 
 The Input Nodes are explained below,
@@ -325,6 +338,21 @@ Captures a video recording with a user defined time.
  </tr>
 </table>
 </div>
+
+
+## Vidus Error Codes
+
+Following error codes will be returned on the `onVidusFailure` method of the callback
+
+| CODE | DESCRIPTION                  |
+| ---- | ---------------------------- |
+| 803  | Permission denied             |
+| 804  | SDK was interrupted       |
+| 805  | Vidus SDK License expired            |
+| 806  | Vidus SDK License was invalid |
+| 807  | Invalid Config         |
+| 808  | Transaction Failed       |
+| 809  | No Internet Available             |
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
