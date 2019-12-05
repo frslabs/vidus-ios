@@ -85,7 +85,7 @@ class YourViewController: UIViewController {
         addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
         
         // For Video with Custom Text
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.videoWithCustomText.rawValue)
+        addNodeWithParam(nodeName: VIDUS.VidusNodeName.PIVNode.rawValue)
         
         // Result
         addOutputObserver()
