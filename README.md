@@ -143,7 +143,7 @@ class YourViewController: UIViewController {
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParams)
-        case VIDUS.VidusNodeName.videoWithCustomText.rawValue:
+        case VIDUS.VidusNodeName.PIVNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             inputParams.append(nodeParams)
@@ -170,7 +170,7 @@ class YourViewController: UIViewController {
     
     @objc private func output(notification: NSNotification){
         if notification.object != nil{
-            let objectName = notification.object as! SDKOutput
+            let objectName = notification.object as! NodeCollectionController
             let outputURL = objectName.VideoSDKResultURL
             let ErrorCode = objectName.ErrorCode
         }
@@ -195,7 +195,7 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
-7. **[Video With Custom Text](#Video-With-Custom-Text)**
+7. **[PIV Node](#PIV-Node)**
 
 
 The Input Nodes are explained below,
@@ -321,7 +321,7 @@ Captures a video recording with a user defined time.
 </div>
 
 
-#### Video With Custom Text
+#### PIV Node
 
 <div>
 <table style="width:100%">
@@ -353,6 +353,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 807  | Invalid Config         |
 | 808  | Transaction Failed       |
 | 809  | No Internet Available             |
+| 810  | Screen Recording Permision denied             |
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
