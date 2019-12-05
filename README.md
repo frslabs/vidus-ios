@@ -346,7 +346,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 
 | CODE | DESCRIPTION                  |
 | ---- | ---------------------------- |
-| 803  | Permission denied             |
+| 803  | Camera or Microphone Permission denied             |
 | 804  | SDK was interrupted       |
 | 805  | Vidus SDK License expired            |
 | 806  | Vidus SDK License was invalid |
