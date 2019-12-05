@@ -195,7 +195,7 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
-7. **[PIV Node](#PIV-Node)**
+7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
 
 
 The Input Nodes are explained below,
