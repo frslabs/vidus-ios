@@ -102,7 +102,7 @@ class YourViewController: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if inputParams.count > 0{
-           VIDUS.initialize(caller: self, nodeParam: inputParams, licenceKey: "Enter lcence Key")
+           VIDUS.initialize(caller: self, nodeParam: inputParams, licenceKey: "Enter licence Key")
         }
     }
     
