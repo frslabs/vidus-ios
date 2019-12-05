@@ -333,7 +333,7 @@ Captures a video recording with a user defined time.
  <td>Sets the text that will be spoken.</td>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue]</b>videoApiBaseUrl</td>
+ <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
  <td>Vidus API Base URL.
  </tr>
 </table>
