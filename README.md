@@ -355,6 +355,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 808  | Transaction Failed       |
 | 809  | No Internet Available             |
 | 810  | Screen Recording Permision denied             |
+| 811  | Upload Video Response failed            |
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
