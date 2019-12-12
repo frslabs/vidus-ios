@@ -38,7 +38,7 @@ source 'https://gitlab.com/frslabs-public/ios/vidus.git'
 platform :ios, '10.0'
 use_frameworks!
 pod 'VIDUS', '0.1.4'
-pod 'Alamofire'
+pod 'Alamofire', '~> 4.8.2-rc.3'
 target '<Your Target Name>' do
 end
 ```
