@@ -145,7 +145,7 @@ class YourViewController: UIViewController {
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.PIVNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
+            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.PIVNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             inputParams.append(nodeParameters)
         default:
