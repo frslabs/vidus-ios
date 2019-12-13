@@ -59,7 +59,7 @@ $ pod install
 class YourViewController: UIViewController {
 
     var inputParams = [[String : String]]()
-    var nodeParams = [String : String]()
+    var nodeParameters = [String : String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -120,34 +120,34 @@ class YourViewController: UIViewController {
         case VIDUS.VidusNodeName.simpleRecorderNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.simpleRecorderNode.rawValue
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "8"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.challengeCodeNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeCodeNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.challengeTextNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeTextNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "12"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.declarationNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.declarationNode.rawValue
             nodeParams[VIDUS.VidusParameter.voiceType.rawValue] = VIDUS.VidusVoiceType.byMacine.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.oSVRecorderNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVRecorderNode.rawValue
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "10"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.PIVNode.rawValue:
             nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.videoWithCustomText.rawValue
             nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParams.append(nodeParams)
+            inputParams.append(nodeParameters)
         default:
             print("Error: Node is empty")
         }
@@ -174,6 +174,7 @@ class YourViewController: UIViewController {
             let objectName = notification.object as! NodeCollectionController
             let outputURL = objectName.VideoSDKResultURL
             let ErrorCode = objectName.ErrorCode
+            let secretCodeVerificationResponse = objectName.SecretNumberVerificationStatus
         }
     }
     
