@@ -125,7 +125,7 @@ class YourViewController: UIViewController {
             nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeCodeNode.rawValue
             nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = "BASE_URL"
-            nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = "KEY_iD"
+            nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = "KEY_ID"
             nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = "KEY_SECRET" 
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.challengeTextNode.rawValue:
