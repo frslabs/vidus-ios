@@ -118,35 +118,41 @@ class YourViewController: UIViewController {
     func addNodeWithParam(nodeName:String) {
         switch nodeName {
         case VIDUS.VidusNodeName.simpleRecorderNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.simpleRecorderNode.rawValue
-            nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "8"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.simpleRecorderNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "8"
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.challengeCodeNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeCodeNode.rawValue
-            nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeCodeNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = "BASE_URL"
+            nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = "KEY_iD"
+            nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = "KEY_SECRET" 
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.challengeTextNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeTextNode.rawValue
-            nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "12"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeTextNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "12"
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.declarationNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.declarationNode.rawValue
-            nodeParams[VIDUS.VidusParameter.voiceType.rawValue] = VIDUS.VidusVoiceType.byMacine.rawValue
-            nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.declarationNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.voiceType.rawValue] = VIDUS.VidusVoiceType.byMacine.rawValue
+            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.oSVRecorderNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVRecorderNode.rawValue
-            nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "10"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVRecorderNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "10"
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue
-            nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            nodeParams[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
             inputParams.append(nodeParameters)
         case VIDUS.VidusNodeName.PIVNode.rawValue:
-            nodeParams[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.PIVNode.rawValue
-            nodeParams[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.PIVNode.rawValue
+            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
+            nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = "BASE_URL"
+            nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = "KEY_iD"
+            nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = "KEY_SECRET"  
             inputParams.append(nodeParameters)
         default:
             print("Error: Node is empty")
