@@ -363,7 +363,8 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 809  | No Internet Available             |
 | 810  | Screen Recording Permision denied             |
 | 811  | Upload Video to server failed            |
-| 812  | Upload audio to server failed            |
+| 812  | Upload Audio to server failed            |
+| 813  | Upload Image to server failed            |
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
