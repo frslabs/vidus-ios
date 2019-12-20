@@ -241,6 +241,16 @@ Captures a video recording which will include a user-read 4 digit code prompted 
     <td>Sets the text that will be spoken prior to displaying the code.</td>
   </tr>
   <tr>
+  <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
+ <td>Vidus API Base URL.
+ </tr>
+ <tr>
+ <td><b>nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = </b>Key iD</td>
+ <td>Sets the key id.</td>
+ <tr>
+ <tr>
+ <td><b>nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = </b>Key SECRET</td>
+ <td>Sets the Key Secret id.</td>
  </tr>
 </table>
 </div>
@@ -346,9 +356,16 @@ Captures a video recording with a user defined time.
  <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
  <td>Vidus API Base URL.
  </tr>
+ <tr>
+ <td><b>nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = </b>Key iD</td>
+ <td>Sets the key id.</td>
+ <tr>
+ <tr>
+ <td><b>nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = </b>Key SECRET</td>
+ <td>Sets the Key Secret id.</td>
+ <tr>
 </table>
 </div>
-
 
 ## Vidus Error Codes
 
