@@ -1,5 +1,5 @@
 # VIDUS iOS SDK
-![version](https://img.shields.io/badge/version-v0.1.4-blue)
+![version](https://img.shields.io/badge/version-v1.0.0-blue)
 
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
@@ -39,8 +39,8 @@ To integrate **Vidus** into your Xcode project using CocoaPods, specify it in yo
 source 'https://gitlab.com/frslabs-public/ios/vidus.git'
 platform :ios, '11.0'
 use_frameworks!
-pod 'VIDUS', '0.1.4'
-pod 'Alamofire', '~> 4.8.2-rc.3'
+pod 'VIDUS', '1.0.0'
+pod 'Alamofire'
 target '<Your Target Name>' do
 end
 ```
@@ -55,40 +55,48 @@ $ pod install
 
 ### Swift
 
-1. Initialize the input parameters including the `nodes` to be invoked
+1. Initialize the input parameters including the `nodes` to be invoked and import delegate RecordingDelegate
 
 ```swift
-class YourViewController: UIViewController {
+class YourViewController: UIViewController,RecordingDelegate {
 
-    var inputParams = [[String : String]]()
-    var nodeParameters = [String : String]()
+ func screenRecording(recording: ScreenNavigationViewController, didFinishRecordingWithResult results: VidusResults) {
+      // Success Response
+     let videoUrl = results.vidusVideoUrl
+     let secretNumberValidationResponse = results.SecretNumberVerificationStatus
+    }
+    func screenRecording(recording: ScreenNavigationViewController, didFailWithError error: String) {
+       // Get Error
+       let errorCode = error
+    }
+
+     var inputParams = [[String : String]]()
+     var inputParameters = [String : String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // For simple node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.simpleRecorderNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue)
         
         // For challenge text node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.challengeTextNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue)
         
         // For challenge code node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.challengeCodeNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeCodeNode.rawValue)
         
         // For declaration node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.declarationNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue)
         
         // For osv recorder node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVRecorderNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue)
         
         // For osv challenge text node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue)
         
         // For osv challenge text node
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue)
+        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue)
         
-        // For Video with Custom Text
-        addNodeWithParam(nodeName: VIDUS.VidusNodeName.PIVNode.rawValue)
         
         // Result
         addOutputObserver()
@@ -104,8 +112,14 @@ class YourViewController: UIViewController {
     // ...
     
     override func viewDidAppear(_ animated: Bool) {
-        if inputParams.count > 0{
-           VIDUS.initialize(caller: self, nodeParam: inputParams, licenceKey: "Enter licence Key")
+          if inputParam.count > 0{
+            let recorder = ScreenNavigationViewController(delegate: self)
+            recorder.modalPresentationStyle = .fullScreen
+            recorder.recordingNodeName = nodeArray
+            recorder.nodeData = inputParam
+            recorder.recordingType = VidusInput.RecordingType.screen.rawValue
+            recorder.licenceKey = onlineLicenceKey
+            present(recorder, animated: true)
         }
     }
     
@@ -119,70 +133,38 @@ class YourViewController: UIViewController {
     
     func addNodeWithParam(nodeName:String) {
         switch nodeName {
-        case VIDUS.VidusNodeName.simpleRecorderNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.simpleRecorderNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "8"
-            inputParams.append(nodeParameters)
-        case VIDUS.VidusNodeName.challengeCodeNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeCodeNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = "BASE_URL"
-            nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = "KEY_ID"
-            nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = "KEY_SECRET" 
-            inputParams.append(nodeParameters)
-        case VIDUS.VidusNodeName.challengeTextNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.challengeTextNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "12"
-            inputParams.append(nodeParameters)
-        case VIDUS.VidusNodeName.declarationNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.declarationNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.voiceType.rawValue] = VIDUS.VidusVoiceType.byMacine.rawValue
-            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParams.append(nodeParameters)
-        case VIDUS.VidusNodeName.oSVRecorderNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVRecorderNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "10"
-            inputParams.append(nodeParameters)
-        case VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.oSVChallengeTextNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = "13"
-            inputParams.append(nodeParameters)
-        case VIDUS.VidusNodeName.PIVNode.rawValue:
-            nodeParameters[VIDUS.VidusParameter.nodeName.rawValue] = VIDUS.VidusNodeName.PIVNode.rawValue
-            nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = "Sample Text"
-            nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = "BASE_URL"
-            nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = "KEY_iD"
-            nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = "KEY_SECRET"  
-            inputParams.append(nodeParameters)
+        case VidusInput.VidusInputNode.simpleRecorderNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] =      VidusInput.VidusInputNode.simpleRecorderNode.rawValue
+             inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "8"
+            inputParam.append(inputParameters)
+        case VidusInput.VidusInputNode.challengeCodeNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.challengeCodeNode.rawValue
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
+            inputParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = "BASE_URL"
+            inputParameters[VidusInput.SDKInputParameter.keyId.rawValue] = "KEY_ID"
+            inputParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = "KEY_SECRET"
+            inputParam.append(inputParameters)
+        case VidusInput.VidusInputNode.challengeTextNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] =  VidusInput.VidusInputNode.challengeCodeNode.rawValue
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "12"
+           inputParam.append(inputParameters)
+        case VidusInput.VidusInputNode.declarationNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.declarationNode.rawValue
+            inputParameters[VidusInput.SDKInputParameter.voiceType.rawValue] = VidusInput.VoiceType.byMacine.rawValue
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
+            inputParam.append(inputParameters)
+        case VidusInput.VidusInputNode.oSVRecorderNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.oSVRecorderNode.rawValue
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "10"
+           inputParam.append(inputParameters)
+        case VidusInput.VidusInputNode.oSVRecorderNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "13"
+            inputParam.append(inputParameters)
         default:
             print("Error: Node is empty")
-        }
-    }
-    
-    // ...
-```
-
-4. Finally, to get the output from Vidus framework, add the following function inside ViewController Class:
-
-```swift
-    // ...
-     
-    func addOutputObserver(){
-        NotificationCenter.default.addObserver(
-            self,
-            selector: #selector(self.output),
-            name: NSNotification.Name(rawValue: NotificationName.output.rawValue),
-            object: nil)
-    }
-    
-    @objc private func output(notification: NSNotification){
-        if notification.object != nil{
-            let objectName = notification.object as! NodeCollectionController
-            let outputURL = objectName.VideoSDKResultURL
-            let ErrorCode = objectName.ErrorCode
-            let secretCodeVerificationResponse = objectName.SecretNumberVerificationStatus
         }
     }
     
@@ -205,7 +187,6 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
-7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
 
 
 The Input Nodes are explained below,
@@ -381,9 +362,9 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 808  | Transaction Failed       |
 | 809  | No Internet Available             |
 | 810  | Screen Recording Permision denied             |
-| 811  | Upload Video to server failed            |
 | 812  | Upload Audio to server failed            |
-| 813  | Upload Image to server failed            |
+| 813  | Microphone Permission denied            |
+
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
