@@ -275,7 +275,7 @@ Captures a video recording which will include a user-read or machine-read text/d
  <td><b>nodeParameters[VidusInput.SDKInputParameter.voiceType.rawValue] = </b>(<em>int videoDeclarationSpokenMethod</em>)</td>
  <td>(OPTIONAL) </br> Sets the way the text is to be spoken, 
  </br> Either by the user or by the machine.</br>
- </br> Values are </br> <b>VIDUS.VidusVoiceType.byMacine.rawValue </br> VIDUS.VidusVoiceType.byUser.rawValue </b>(Default Value) </td>
+ </br> Values are </br> <b>VidusInput.VoiceType.byMacine.rawValue </br> VidusInput.VoiceType.byUser.rawValue </b>(Default Value) </td>
  </tr>
 </table>
 </div>
