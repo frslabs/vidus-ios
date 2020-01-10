@@ -196,7 +196,7 @@ Captures a video recording with a user defined time.
     <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
   </tr>
   <tr>
-    <td><b>nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = </b>videoRecordTime</td>
+    <td><b>nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = </b>videoRecordTime</td>
     <td>Sets the time(<em>String</em>) taken for the recording of the node.
     </br></br> Values should be between <b> 1 and 100 </b> </td>
   </tr>
@@ -213,19 +213,19 @@ Captures a video recording which will include a user-read 4 digit code prompted 
     <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
   </tr>
   <tr>
-    <td><b>nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = </b>videoChallengeCodeText</td>
+    <td><b>nodeParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = </b>videoChallengeCodeText</td>
     <td>Sets the text that will be spoken prior to displaying the code.</td>
   </tr>
   <tr>
-  <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
+  <td><b>nodeParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
  <td>Vidus API Base URL.
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = </b>Key iD</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.keyId.rawValue] = </b>Key iD</td>
  <td>Sets the key id.</td>
  <tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = </b>Key SECRET</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = </b>Key SECRET</td>
  <td>Sets the Key Secret id.</td>
  </tr>
 </table>
@@ -242,11 +242,11 @@ Captures a video recording which will include a user-prompted answer with a cust
  <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = </b>videoChallengeText</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = </b>videoChallengeText</td>
  <td>Sets the text that will be spoken.</td>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue]</b> videoChallengeTextTime</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue]</b> videoChallengeTextTime</td>
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
  </br></br> Values should be between <b> 1 and 100 </b> </td>
  </tr>
@@ -265,14 +265,14 @@ Captures a video recording which will include a user-read or machine-read text/d
  <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
  </tr>
  <tr>
- <td><b> nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = </b>videoDeclarationText</td>
+ <td><b> nodeParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = </b>videoDeclarationText</td>
  <td>Sets the text that will be displayed.</td>
  </tr>
  <tr>
 </td>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.voiceType.rawValue] = </b>(<em>int videoDeclarationSpokenMethod</em>)</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.voiceType.rawValue] = </b>(<em>int videoDeclarationSpokenMethod</em>)</td>
  <td>(OPTIONAL) </br> Sets the way the text is to be spoken, 
  </br> Either by the user or by the machine.</br>
  </br> Values are </br> <b>VIDUS.VidusVoiceType.byMacine.rawValue </br> VIDUS.VidusVoiceType.byUser.rawValue </b>(Default Value) </td>
@@ -290,7 +290,7 @@ Captures a video recording with a user defined time.
 <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
 </tr>
 <tr>
-<td><b> nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = </b>videoRecordTime</td>
+<td><b> nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = </b>videoRecordTime</td>
 <td>Sets the time(<em></em>) taken for the recording of the node.
 </br></br> Values should be between <b> 1 and 100 </b> </td>
 </tr>
@@ -305,11 +305,11 @@ Captures a video recording with a user defined time.
  <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = </b>videoChallengeText</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = </b>videoChallengeText</td>
  <td>Sets the text that will be spoken.</td>
  </tr>
  <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.timeDuration.rawValue] = </b> videoChallengeTextTime</td>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = </b> videoChallengeTextTime</td>
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
  </br></br> Values should be between <b> 1 and 100 </b> </td>
  </tr>
