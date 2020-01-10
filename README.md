@@ -94,12 +94,7 @@ class YourViewController: UIViewController,RecordingDelegate {
         // For osv challenge text node
         addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue)
         
-        // For osv challenge text node
-        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue)
-        
-        
-        // Result
-        addOutputObserver()
+       
     }
     
     // ...
@@ -112,7 +107,7 @@ class YourViewController: UIViewController,RecordingDelegate {
     // ...
     
     override func viewDidAppear(_ animated: Bool) {
-          if inputParam.count > 0{
+          if inputParams.count > 0{
             let recorder = ScreenNavigationViewController(delegate: self)
             recorder.modalPresentationStyle = .fullScreen
             recorder.recordingNodeName = nodeArray
@@ -318,33 +313,6 @@ Captures a video recording with a user defined time.
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
  </br></br> Values should be between <b> 1 and 100 </b> </td>
  </tr>
-</table>
-</div>
-
-
-#### PIV Node
-
-<div>
-<table style="width:100%">
- <tr>
- <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
- </tr>
- <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.challengeCodeText.rawValue] = </b>videoChallengeText</td>
- <td>Sets the text that will be spoken.</td>
- </tr>
- <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
- <td>Vidus API Base URL.
- </tr>
- <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.keyId.rawValue] = </b>Key iD</td>
- <td>Sets the key id.</td>
- <tr>
- <tr>
- <td><b>nodeParameters[VIDUS.VidusParameter.keySecret.rawValue] = </b>Key SECRET</td>
- <td>Sets the Key Secret id.</td>
- <tr>
 </table>
 </div>
 
