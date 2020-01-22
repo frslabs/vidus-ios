@@ -38,10 +38,10 @@ To integrate **Vidus** into your Xcode project using CocoaPods, specify it in yo
 ```
 source 'https://gitlab.com/frslabs-public/ios/vidus.git'
 platform :ios, '11.0'
+target '<Your Target Name>' do
 use_frameworks!
 pod 'VIDUS', '1.0.0'
 pod 'Alamofire'
-target '<Your Target Name>' do
 end
 ```
 
