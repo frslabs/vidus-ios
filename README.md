@@ -41,7 +41,7 @@ platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
 pod 'VIDUS', '1.0.0'
-pod 'Alamofire'
+pod 'Alamofire', :git => ‘https://github.com/Alamofire/Alamofire.git’
 end
 ```
 
