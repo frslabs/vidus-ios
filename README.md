@@ -110,7 +110,7 @@ class YourViewController: UIViewController,RecordingDelegate {
     override func viewDidAppear(_ animated: Bool) {
           if inputParams.count > 0{
             let recorder = ScreenNavigationViewController(delegate: self)
-            recorder.recordingNodeName = nodeArray
+            recorder.recordingNodeName = nodeNameArray
             recorder.nodeData = inputParam
             recorder.recordingType = VidusInput.RecordingType.screen.rawValue
             recorder.licenceKey = onlineLicenceKey
