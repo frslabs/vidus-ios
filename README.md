@@ -347,6 +347,9 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 810  | Screen Recording Permision denied             |
 | 812  | Upload Audio to server failed            |
 | 813  | Microphone Permission denied            |
+| 815  | No Face Detected            |
+| 816  | Multiple Face Detected            |
+| 817  | Face Match Failed            |
 
 
 ## Help
