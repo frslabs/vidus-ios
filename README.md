@@ -122,14 +122,15 @@ class YourViewController: UIViewController,RecordingDelegate {
     // ...
     
     override func viewDidAppear(_ animated: Bool) {
-          if inputParams.count > 0{
-            let recorder = ScreenNavigationViewController(delegate: self)
-            recorder.recordingNodeName = nodeNameArray
-            recorder.nodeData = inputParam
-            recorder.recordingType = VidusInput.RecordingType.screen.rawValue
-            recorder.licenceKey = onlineLicenceKey
-            present(recorder, animated: true)
-        }
+         if inputParam.count > 0{
+         let recorder = ScreenNavigationViewController(delegate: self)
+         recorder.modalPresentationStyle = .fullScreen
+         recorder.recordingNodeName = nodeNameArray
+         recorder.nodeData = inputParam
+         recorder.recordingType = VidusInput.RecordingType.screen.rawValue
+         recorder.licenceKey = onlineLicenceKey
+         present(recorder, animated: true)
+         }
     }
     
     // ...    
