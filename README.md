@@ -90,25 +90,25 @@ class YourViewController: UIViewController,RecordingDelegate {
        
        addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "8", baseUrl: "",      keyId: "", keySecret: "", messageText: "", voiceType: nil)
      
-       // MARK:  For Challenge Code Node
+      // MARK:  For Challenge Code Node
        
        addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeCodeNode.rawValue, timeDuration: nil, baseUrl: "Base_URL", keyId: "KEY_ID", keySecret: "KEY_SECRET", messageText: "Sample_Text", voiceType: nil)
         
-        // MARK:  For Challenge Text Node
+      // MARK:  For Challenge Text Node
         
        addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil)
         
-        // MARK:  For Declaration Node
+      // MARK:  For Declaration Node
         
-        addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: VidusInput.VoiceType.byMacine.rawValue)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: VidusInput.VoiceType.byMacine.rawValue)
         
-        // MARK:  For OSV Recorder Node
+      // MARK:  For OSV Recorder Node
         
-        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
         
-        // MARK:  For OSV Challenge Node
+      // MARK:  For OSV Challenge Node
         
-        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil)
           
     }
     
@@ -130,7 +130,7 @@ class YourViewController: UIViewController,RecordingDelegate {
          recorder.recordingType = VidusInput.RecordingType.screen.rawValue
          recorder.licenceKey = onlineLicenceKey
          present(recorder, animated: true)
-         }
+          }
     }
     
     // ...    
