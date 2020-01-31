@@ -140,49 +140,49 @@ class YourViewController: UIViewController,RecordingDelegate {
 ```swift
     // ...
     
-    func addNodeWithParam(nodeName:String) {
+    func addNodeWithParam(nodeName:String,timeDuration:String?,baseUrl:String?,keyId:String?,keySecret:String?,messageText:String?,voiceType:String?) {
         switch nodeName {
         case VidusInput.VidusInputNode.simpleRecorderNode.rawValue:
-            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] =              VidusInput.VidusInputNode.simpleRecorderNode.rawValue
-             inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "8"
-             inputParam.append(inputParameters)
-             nodeNameArray.append(VidusInput.VidusInputNode.simpleRecorderNode.rawValue)
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
+            nodeNameArray.append(nodeName)
+            inputParam.append(inputParameters)
         case VidusInput.VidusInputNode.challengeCodeNode.rawValue:
-            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.challengeCodeNode.rawValue
-            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = "BASE_URL"
-            inputParameters[VidusInput.SDKInputParameter.keyId.rawValue] = "KEY_ID"
-            inputParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = "KEY_SECRET"
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
+            inputParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = baseUrl
+            inputParameters[VidusInput.SDKInputParameter.keyId.rawValue] = keyId
+            inputParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = keySecret
+            nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
-            nodeNameArray.append(VidusInput.VidusInputNode.challengeCodeNode.rawValue)
         case VidusInput.VidusInputNode.challengeTextNode.rawValue:
-            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] =  VidusInput.VidusInputNode.challengeCodeNode.rawValue
-            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "12"
-           inputParam.append(inputParameters)
-           nodeNameArray.append(VidusInput.VidusInputNode.challengeTextNode.rawValue)
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] =  nodeName
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
+            nodeNameArray.append(nodeName)
+            inputParam.append(inputParameters)
         case VidusInput.VidusInputNode.declarationNode.rawValue:
-            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.declarationNode.rawValue
-            inputParameters[VidusInput.SDKInputParameter.voiceType.rawValue] = VidusInput.VoiceType.byMacine.rawValue
-            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.voiceType.rawValue] = voiceType
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
+            nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
-            nodeNameArray.append(VidusInput.VidusInputNode.declarationNode.rawValue)
         case VidusInput.VidusInputNode.oSVRecorderNode.rawValue:
-            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.oSVRecorderNode.rawValue
-            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "10"
-           inputParam.append(inputParameters)
-           nodeNameArray.append(VidusInput.VidusInputNode.oSVRecorderNode.rawValue)
-        case VidusInput.VidusInputNode.oSVRecorderNode.rawValue:
-            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue
-            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = "Sample Text"
-            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = "13"
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
+            nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
-            nodeNameArray.append(VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue)
+        case VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
+            inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
+            nodeNameArray.append(nodeName)
+            inputParam.append(inputParameters)
         default:
             print("Error: Node is empty")
         }
     }
-    
+   
     // ...
 ```
 
