@@ -1,5 +1,11 @@
 # Changelog
 
+## **v1.0.1** - *31-01-2020*
+### What’s New
+- Bug fixes.
+- Added Challenge code verification functionality through the server for challenge code node. 
+
+
 ## **v1.0.0** - *10-01-2020*
 ### What’s New
 - Added face detection functionality for Simple recorder node,Challenge code node,Challenge text node,Declaration node,OSV Challenge node,OSV Text Challenge node."FACE NOT FOUND" message will appear when face is not detected.
