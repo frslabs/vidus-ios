@@ -130,6 +130,7 @@ class YourViewController: UIViewController,RecordingDelegate {
          recorder.recordingType = VidusInput.RecordingType.screen.rawValue
          recorder.licenceKey = onlineLicenceKey
          present(recorder, animated: true)
+         inputParam.removeAll()
           }
     }
     
