@@ -356,6 +356,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 812  | Upload Audio to server failed            |
 | 813  | Microphone Permission denied            |
 | 815  | Secret Number Verification Failed            |
+| 819  | Timeout             |
 
 
 
