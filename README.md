@@ -358,7 +358,8 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 815  | Secret Number Verification Failed            |
 | 819  | Timeout             |
 
-
+## Note
+In iOS12,if error code 810 would be in sdk response Restart the device,Try again.
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
