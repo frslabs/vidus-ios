@@ -360,9 +360,6 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 818  | Upload Screen Recorded Video Failed            |
 | 819  | Timeout             |
 
-## Note
-In iOS 12 , if error code encounter 810  Restart the device,Try again.
-In ioS 12 if recorded audio is not available inside video Restart device.
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
