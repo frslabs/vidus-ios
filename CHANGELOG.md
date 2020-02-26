@@ -23,6 +23,6 @@
 ### Initial Release
 
 ### Known Issues
-- In iOS 12 if there are error code 810 encounters than restart device.
-- In iOS 12 Audio is not available than restart device.
+- In iOS 12 , if there are error code 810 encounters than restart device.
+- In iOS 12 , Audio is not available in recorded video than restart device.
  
