@@ -362,6 +362,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 
 ## Note
 In iOS 12 , if error code 810 would be in sdk response Restart the device,Try again.
+In ioS 12 if recorded audio is not available inside video Restart device.
 
 ## Help
 For any queries/feedback , contact us at `support@frslabs.com` 
