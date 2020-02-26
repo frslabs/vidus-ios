@@ -3,7 +3,7 @@
 ## **v1.0.1** - *31-01-2020*
 ### What’s New
 - Bug fixes.
-- Added Challenge code verification functionality through the server for challenge code node. 
+- Added Challenge code verification functionality through the server for challenge code node(This Node will work independently). 
 
 
 ## **v1.0.0** - *10-01-2020*
