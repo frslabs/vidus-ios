@@ -21,4 +21,8 @@
 
 ## **v0.1.3** - *09-10-2019*
 ### Initial Release
+
+### Known Issues
+- In iOS 12 if there are error code 810 encounters than restart device.
+- In iOS 12 Audio is not available than restart device.
  
