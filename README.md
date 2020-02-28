@@ -359,6 +359,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 815  | Secret Number Verification Failed            |
 | 818  | Upload Screen Recorded Video Failed            |
 | 819  | Timeout             |
+| 820  | Minimum Recording time duration is not set            |
 
 
 ## Help
