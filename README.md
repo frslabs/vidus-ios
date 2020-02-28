@@ -221,7 +221,7 @@ Captures a video recording with a user defined time.
   <tr>
     <td><b>nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = </b>videoRecordTime</td>
     <td>Sets the time(<em>String</em>) taken for the recording of the node.
-    </br></br> Values should be between <b> 1 and 100 </b> </td>
+    </br></br> Values should be between <b> 10 and 100 </b> </td>
   </tr>
 </table>
 </div>
@@ -271,7 +271,7 @@ Captures a video recording which will include a user-prompted answer with a cust
  <tr>
  <td><b>nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue]</b> videoChallengeTextTime</td>
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
- </br></br> Values should be between <b> 1 and 100 </b> </td>
+ </br></br> Values should be between <b> 10 and 100 </b> </td>
  </tr>
  <tr>
  </tr>
@@ -315,7 +315,7 @@ Captures a video recording with a user defined time.
 <tr>
 <td><b> nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = </b>videoRecordTime</td>
 <td>Sets the time(<em></em>) taken for the recording of the node.
-</br></br> Values should be between <b> 1 and 100 </b> </td>
+</br></br> Values should be between <b> 10 and 100 </b> </td>
 </tr>
 </table>
 </div>
@@ -334,7 +334,7 @@ Captures a video recording with a user defined time.
  <tr>
  <td><b>nodeParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = </b> videoChallengeTextTime</td>
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
- </br></br> Values should be between <b> 1 and 100 </b> </td>
+ </br></br> Values should be between <b> 10 and 100 </b> </td>
  </tr>
 </table>
 </div>
