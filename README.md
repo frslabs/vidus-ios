@@ -150,6 +150,7 @@ class YourViewController: UIViewController,RecordingDelegate {
             inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
+            break
         case VidusInput.VidusInputNode.challengeCodeNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
             inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
@@ -158,29 +159,43 @@ class YourViewController: UIViewController,RecordingDelegate {
             inputParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = keySecret
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
+            break
         case VidusInput.VidusInputNode.challengeTextNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] =  nodeName
             inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
             inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
+            break
         case VidusInput.VidusInputNode.declarationNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
             inputParameters[VidusInput.SDKInputParameter.voiceType.rawValue] = voiceType
             inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
+            break
         case VidusInput.VidusInputNode.oSVRecorderNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
             inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
+            break
         case VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
             inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
             inputParameters[VidusInput.SDKInputParameter.timeDuration.rawValue] = timeDuration
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
+            break
+         case VidusInput.VidusInputNode.PIVNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = messageText
+            inputParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = baseUrl
+            inputParameters[VidusInput.SDKInputParameter.keyId.rawValue] = keyId
+            inputParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = keySecret
+            nodeNameArray.append(nodeName)
+            inputParam.append(inputParameters)
+            break
         default:
             print("Error: Node is empty")
         }
