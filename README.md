@@ -220,6 +220,8 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
+7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
+
 
 
 The Input Nodes are explained below,
@@ -351,6 +353,58 @@ Captures a video recording with a user defined time.
  <td>Sets the recording time(<em></em>) for the node after the text is spoken.
  </br></br> Values should be between <b> 10 and 100 </b> </td>
  </tr>
+</table>
+</div>
+
+#### PIV Node
+
+<div>
+<table style="width:100%">
+<tr>
+<th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
+</tr>
+<tr>
+<td><b>setVideoChallengeText</b>(<em>String videoChallengeText</em>)</td>
+<td>Sets the text that will be displayed.
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextTime</b>(<em>int videoChallengeTextTime</em>)</td>
+<td>Sets the time(<em>seconds</em>) taken for the recording of the node.
+</br></br> Values should be between <b> 1 and 100 </b> </td>
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>)</td>
+<td>Sets the text(In English) that will be spoken. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine. </td>
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>,<em>String fallbackVideoChallengeTextToSpeak</em>)</td>
+<td>Sets the text (Vernacular) that will be spoken, with a necessary fallback text (In English) that will be spoken if speaking the former text failed. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine.</td>
+</tr>
+
+<tr>
+<td><b>setLanguage</b>(<em>String language</em>)</td>
+<td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak</i></b> has to be spoken</td>
+</tr>
+
+<tr>
+<td><b>setPositiveButtonText</b>(<em>String positiveButtonText</em>)</td>
+<td>Sets the text to be shown in the Positive action button.
+</tr>
+
+<tr>
+<td><b>setNegativeButtonText</b>(<em>String negativeButtonText</em>)</td>
+<td>Sets the text to be shown in the Negative action button.
+</tr>
+
+<tr>
+<td><b>setVideoChallengeTextVoiceType</b>(<em>int videoChallengeTextVoiceType</em>)</td>
+<td>(OPTIONAL) </br> Sets the voice type for the machine-read text.
+</br></br> Values are </br> <b>VideoSdkUtility.VOICE_TYPE_MALE </br> VideoSdkUtility.VOICE_TYPE_FEMALE</b>(Default Value) </td>
+</tr>
+
 </table>
 </div>
 
