@@ -360,53 +360,28 @@ Captures a video recording with a user defined time.
 
 <div>
 <table style="width:100%">
-<tr>
-<th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
-</tr>
-<tr>
-<td><b>setVideoChallengeText</b>(<em>String videoChallengeText</em>)</td>
-<td>Sets the text that will be displayed.
-</tr>
-
-<tr>
-<td><b>setVideoChallengeTextTime</b>(<em>int videoChallengeTextTime</em>)</td>
-<td>Sets the time(<em>seconds</em>) taken for the recording of the node.
-</br></br> Values should be between <b> 1 and 100 </b> </td>
-</tr>
-
-<tr>
-<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>)</td>
-<td>Sets the text(In English) that will be spoken. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine. </td>
-</tr>
-
-<tr>
-<td><b>setVideoChallengeTextToSpeak</b>(<em>String videoChallengeTextToSpeak</em>,<em>String fallbackVideoChallengeTextToSpeak</em>)</td>
-<td>Sets the text (Vernacular) that will be spoken, with a necessary fallback text (In English) that will be spoken if speaking the former text failed. In PIV node, clients should ensure that currencies are written in full for the speech to text function to work correctly. For example 2Cr should be written as 2 Crores. And currency symbols should be written in full. For example, Rs should be written as Rupees. Any number over 6 digits will be treated as a monetary number when spoken by the machine.</td>
-</tr>
-
-<tr>
-<td><b>setLanguage</b>(<em>String language</em>)</td>
-<td>Sets the language in which text set in <b><i>setVideoChallengeTextToSpeak</i></b> has to be spoken</td>
-</tr>
-
-<tr>
-<td><b>setPositiveButtonText</b>(<em>String positiveButtonText</em>)</td>
-<td>Sets the text to be shown in the Positive action button.
-</tr>
-
-<tr>
-<td><b>setNegativeButtonText</b>(<em>String negativeButtonText</em>)</td>
-<td>Sets the text to be shown in the Negative action button.
-</tr>
-
-<tr>
-<td><b>setVideoChallengeTextVoiceType</b>(<em>int videoChallengeTextVoiceType</em>)</td>
-<td>(OPTIONAL) </br> Sets the voice type for the machine-read text.
-</br></br> Values are </br> <b>VideoSdkUtility.VOICE_TYPE_MALE </br> VideoSdkUtility.VOICE_TYPE_FEMALE</b>(Default Value) </td>
-</tr>
-
+  <tr>
+    <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
+  </tr>
+  <tr>
+    <td><b>nodeParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = </b>videoChallengeCodeText</td>
+    <td>Sets the text that will be spoken prior to displaying the code.</td>
+  </tr>
+  <tr>
+  <td><b>nodeParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
+ <td>Vidus API Base URL.
+ </tr>
+ <tr>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.keyId.rawValue] = </b>Key iD</td>
+ <td>Sets the key id.</td>
+ <tr>
+ <tr>
+ <td><b>nodeParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = </b>Key SECRET</td>
+ <td>Sets the Key Secret id.</td>
+ </tr>
 </table>
 </div>
+
 
 ## Vidus Error Codes
 
