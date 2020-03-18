@@ -345,21 +345,21 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 
 | CODE | DESCRIPTION                  |
 | ---- | ---------------------------- |
-| 803  | Camera Permission denied             |
-| 804  | SDK was interrupted       |
-| 805  | Vidus SDK License expired            |
-| 806  | Vidus SDK License was invalid |
+| 803  | Camera Permission deny             |
+| 804  | SDK is interrupted       |
+| 805  | Vidus SDK License expire            |
+| 806  | Vidus SDK License is invalid |
 | 807  | Invalid Config         |
-| 808  | Transaction Failed       |
-| 809  | No Internet Available             |
-| 810  | Screen Recording Permision denied             |
-| 812  | Upload Audio to server failed            |
-| 813  | Microphone Permission denied            |
-| 814  | Upload Screen Images Failed            |
-| 815  | Secret Number Verification Failed            |
-| 818  | Upload Screen Recorded Video Failed            |
+| 808  | Transaction Fail       |
+| 809  | Internet is not Available             |
+| 810  | Screen Recording Permision deny             |
+| 812  | Upload Audio to server fail           |
+| 813  | Microphone Permission deny            |
+| 814  | Upload Screen Images Fail            |
+| 815  | Secret Number Verification Fail            |
+| 818  | Upload Screen Recorded Video Fail           |
 | 819  | Timeout             |
-| 820  | Minimum Recording time duration is not set            |
+| 820  | Minimum time duration for recording is not set            |
 
 
 ## Help
