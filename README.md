@@ -365,7 +365,7 @@ Captures a video recording with a user defined time.
   </tr>
   <tr>
     <td><b>nodeParameters[VidusInput.SDKInputParameter.challengeCodeText.rawValue] = </b>videoChallengeCodeText</td>
-    <td>Sets the text that will be spoken prior to displaying the code.</td>
+    <td>Sets the text that will be displayed.</td>
   </tr>
   <tr>
   <td><b>nodeParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = </b>videoApiBaseUrl</td>
