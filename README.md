@@ -110,12 +110,12 @@ class YourViewController: UIViewController,RecordingDelegate {
       // MARK:  For OSV Challenge Node
         
        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil)
-          
-    }
-    
+       
     // MARK: For PIVC Node
     
      addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: "Enter Base Url", keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil)
+          
+    }
     
     // ...
 }
