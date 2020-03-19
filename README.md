@@ -50,7 +50,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '11.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'VIDUS', '1.0.1'
+pod 'VIDUS', '1.1.0'
 pod 'Alamofire', '~> 4.9.1'
 end
 ```
