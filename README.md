@@ -113,6 +113,10 @@ class YourViewController: UIViewController,RecordingDelegate {
           
     }
     
+    // MARK: For PIVC Node
+    
+     addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: "Enter Base Url", keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil)
+    
     // ...
 }
 ```
