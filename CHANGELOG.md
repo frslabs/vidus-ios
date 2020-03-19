@@ -1,5 +1,13 @@
 # Changelog
 
+
+## **v1.1.0** - *19-03-2020*
+### What’s New
+- Bug fixes.
+- Added PIVC Node.
+- Added video recording for declaration node for speak by user(only for iOS 12).
+- Added video recording for challenge Text Node(only for iOS 12)
+
 ## **v1.0.1** - *31-01-2020*
 ### What’s New
 - Bug fixes.
