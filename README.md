@@ -89,7 +89,7 @@ class YourViewController: UIViewController,RecordingDelegate {
       
       // MARK:  For Simple Node
        
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "8", baseUrl: "",      keyId: "", keySecret: "", messageText: "", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: "",      keyId: "", keySecret: "", messageText: "", voiceType: nil)
      
       // MARK:  For Challenge Code Node
        
@@ -97,7 +97,7 @@ class YourViewController: UIViewController,RecordingDelegate {
         
       // MARK:  For Challenge Text Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil)
         
       // MARK:  For Declaration Node
         
@@ -105,11 +105,11 @@ class YourViewController: UIViewController,RecordingDelegate {
         
       // MARK:  For OSV Recorder Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
         
       // MARK:  For OSV Challenge Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "8", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil)
        
     // MARK: For PIVC Node
     
