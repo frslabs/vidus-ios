@@ -89,7 +89,7 @@ class YourViewController: UIViewController,RecordingDelegate {
       
       // MARK:  For Simple Node
        
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: "",      keyId: "", keySecret: "", messageText: "", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: nil,      keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
      
       // MARK:  For Challenge Code Node
        
