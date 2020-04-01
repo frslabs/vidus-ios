@@ -10,6 +10,8 @@
 
 ### Note
 - challenge Code Node will work individually.
+### Supporting Devices
+- iphone 6 series,iphone 7 series ,iphone 8 series,iphone x series.
 
 ## **v1.0.1** - *31-01-2020*
 ### What’s New
