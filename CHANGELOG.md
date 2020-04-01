@@ -8,6 +8,9 @@
 - Added video recording for declaration node for speak by user(only for iOS 12).
 - Added video recording for challenge Text Node(only for iOS 12)
 
+### Note
+- challenge Code Node will work individually.
+
 ## **v1.0.1** - *31-01-2020*
 ### What’s New
 - Bug fixes.
