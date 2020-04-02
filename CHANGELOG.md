@@ -1,5 +1,13 @@
 # Changelog
 
+## **v1.2.0** - *02-04-2020*
+### What’s New
+- Bug fixes.
+
+### Note
+- challenge Code Node will work individually.
+### Supporting Devices
+- iphone 6 series,iphone 7 series ,iphone 8 series,iphone x series.
 
 ## **v1.1.0** - *19-03-2020*
 ### What’s New
