@@ -1,5 +1,5 @@
 # VIDUS iOS SDK
-![version](https://img.shields.io/badge/version-v1.4.0-blue)
+![version](https://img.shields.io/badge/version-v1.5.0-blue)
 
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
@@ -50,7 +50,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '12.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'VIDUS', '1.4.0'
+pod 'VIDUS', '1.5.0'
 pod 'Alamofire', '~> 4.9.1'
 end
 ```
@@ -74,6 +74,7 @@ class YourViewController: UIViewController,RecordingDelegate {
       // Success Response
      let videoUrl = results.vidusVideoUrl
      let secretNumberValidationResponse = results.SecretNumberVerificationStatus
+     let nodeReferenceData = results.nodeReferenceData
     }
     func screenRecording(recording: ScreenNavigationViewController, didFailWithError error: String) {
        // Get Error
