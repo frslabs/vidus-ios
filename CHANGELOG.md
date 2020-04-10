@@ -1,5 +1,9 @@
 # Changelog
 
+## **v1.6.0** - *10-04-2020*
+### What’s New
+- Bug fixes.
+
 ## **v1.2.0** - *02-04-2020*
 ### What’s New
 - Bug fixes.
