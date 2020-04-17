@@ -1,5 +1,11 @@
 # Changelog
 
+## **v1.7.0** - *10-04-2020*
+### What’s New
+- Bug fixes.
+- Added Save and ReRecord functionality.
+
+
 ## **v1.6.0** - *10-04-2020*
 ### What’s New
 - Bug fixes.
