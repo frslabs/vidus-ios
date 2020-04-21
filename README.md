@@ -410,6 +410,7 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 818  | Upload screen recorded video fail           |
 | 819  | Timeout             |
 | 820  | Minimum time duration for recording is not set            |
+| 821  | Recording Video is Failed            |
 
 
 ## Help
