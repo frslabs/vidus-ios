@@ -91,31 +91,31 @@ class YourViewController: UIViewController,RecordingDelegate {
       
       // MARK:  For Simple Node
        
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: nil,      keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: nil,      keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil)
      
       // MARK:  For Challenge Code Node
        
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeCodeNode.rawValue, timeDuration: nil, baseUrl: "Base_URL", keyId: "KEY_ID", keySecret: "KEY_SECRET", messageText: "Sample_Text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeCodeNode.rawValue, timeDuration: nil, baseUrl: "Base_URL", keyId: "KEY_ID", keySecret: "KEY_SECRET", messageText: "Sample_Text", voiceType: nil, questionID: nil)
         
       // MARK:  For Challenge Text Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil, questionID: nil)
         
       // MARK:  For Declaration Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: VidusInput.VoiceType.byMacine.rawValue)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: VidusInput.VoiceType.byMacine.rawValue, questionID: nil)
         
       // MARK:  For OSV Recorder Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil)
         
       // MARK:  For OSV Challenge Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil, questionID: nil)
        
     // MARK: For PIVC Node
     
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: nil,   keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: nil,   keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil, questionID: "Enter Question ID")
           
     }
     
@@ -151,7 +151,7 @@ class YourViewController: UIViewController,RecordingDelegate {
 ```swift
     // ...
     
-    func addNodeWithParam(nodeName:String,timeDuration:String?,baseUrl:String?,keyId:String?,keySecret:String?,messageText:String?,voiceType:String?) {
+    func addNodeWithParam(nodeName:String,timeDuration:String?,baseUrl:String?,keyId:String?,keySecret:String?,messageText:String?,voiceType:String?,questionID:String?) {
         switch nodeName {
         case VidusInput.VidusInputNode.simpleRecorderNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
@@ -201,6 +201,7 @@ class YourViewController: UIViewController,RecordingDelegate {
             inputParameters[VidusInput.SDKInputParameter.baseUrl.rawValue] = baseUrl
             inputParameters[VidusInput.SDKInputParameter.keyId.rawValue] = keyId
             inputParameters[VidusInput.SDKInputParameter.keySecret.rawValue] = keySecret
+            inputParameters[VidusInput.SDKInputParameter.questionID.rawValue] = questionID
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
             break
