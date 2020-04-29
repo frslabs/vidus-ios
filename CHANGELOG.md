@@ -1,5 +1,10 @@
 # Changelog
 
+## **v1.8.0** - *29-04-2020*
+### What’s New
+- Bug fixes.
+- Added Instruction Screen.
+
 ## **v1.7.0** - *10-04-2020*
 ### What’s New
 - Bug fixes.
