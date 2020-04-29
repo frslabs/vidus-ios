@@ -1,5 +1,5 @@
 # VIDUS iOS SDK
-![version](https://img.shields.io/badge/version-v1.7.0-blue)
+![version](https://img.shields.io/badge/version-v1.8.0-blue)
 
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
