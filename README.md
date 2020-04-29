@@ -136,6 +136,8 @@ class YourViewController: UIViewController,RecordingDelegate {
          recorder.nodeData = inputParam
          recorder.recordingType = VidusInput.RecordingType.screen.rawValue
          recorder.licenceKey = onlineLicenceKey
+         recorder.isEnableInstructionScreen = false/true
+         recorder.isEnablePreviewScreen = false/true
          present(recorder, animated: true)
          inputParam.removeAll()
           }
