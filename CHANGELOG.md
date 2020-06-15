@@ -1,4 +1,8 @@
 # Changelog
+## **v2.1.0** - *29-05-2020*
+### What’s New
+- Bug fixes.
+- Performance enhancement.
 
 ## **v1.8.0** - *29-04-2020*
 ### What’s New
