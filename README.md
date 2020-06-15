@@ -135,7 +135,9 @@ class YourViewController: UIViewController,RecordingDelegate {
          recorder.recordingNodeName = nodeNameArray
          recorder.nodeData = inputParam
          recorder.recordingType = VidusInput.RecordingType.screen.rawValue
-         recorder.licenceKey = onlineLicenceKey
+         recorder.licenceKey = "ENTER LICENCE KEY"
+         recorder.serverHeader = "ENTER SERVER_HEADER"
+         recorder.referenceID = "ENTER_SERVER_REFERENCE_ID"
          recorder.isEnableInstructionScreen = false/true
          recorder.isEnablePreviewScreen = false/true
          present(recorder, animated: true)
