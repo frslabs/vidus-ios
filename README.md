@@ -70,23 +70,23 @@ $ pod install
 ```swift
 class YourViewController: UIViewController,RecordingDelegate {
 
- func screenRecording(recording: ScreenNavigationViewController, didFinishRecordingWithResult results: VidusResults) {
-      // Success Response
-     let videoUrl = results.vidusVideoUrl
-     let secretNumberValidationResponse = results.SecretNumberVerificationStatus
-     let nodeReferenceData = results.nodeReferenceData
-     let imageReferenceId  = results.imageReferenceId
-    }
-    func screenRecording(recording: ScreenNavigationViewController, didFailWithError error: String) {
-       // Get Error
-       let errorCode = error
-    }
+   func screenRecording(recording: ScreenNavigationViewController, didFinishRecordingWithResult results: VidusResults) {
+       // Success Response
+      let videoUrl = results.vidusVideoUrl
+      let secretNumberValidationResponse = results.SecretNumberVerificationStatus
+      let nodeReferenceData = results.nodeReferenceData
+      let imageReferenceId  = results.imageReferenceId
+   }
+   func screenRecording(recording: ScreenNavigationViewController, didFailWithError error: String) {
+        // Get Error
+        let errorCode = error
+   }
 
-    var inputParam = [[String : String]]()
-    var inputParameters = [String : String]()
-    var nodeNameArray = [String]()
+   var inputParam = [[String : String]]()
+   var inputParameters = [String : String]()
+   var nodeNameArray = [String]()
     
-    override func viewDidLoad() {
+   override func viewDidLoad() {
         super.viewDidLoad()
       
       // MARK:  For Simple Node
@@ -130,19 +130,19 @@ class YourViewController: UIViewController,RecordingDelegate {
     
     override func viewDidAppear(_ animated: Bool) {
          if inputParam.count > 0{
-         let recorder = ScreenNavigationViewController(delegate: self)
-         recorder.modalPresentationStyle = .fullScreen
-         recorder.recordingNodeName = nodeNameArray
-         recorder.nodeData = inputParam
-         recorder.recordingType = VidusInput.RecordingType.screen.rawValue
-         recorder.licenceKey = "ENTER LICENCE KEY"
-         recorder.serverHeader = "ENTER SERVER_HEADER"
-         recorder.referenceID = "ENTER_SERVER_REFERENCE_ID"
-         recorder.isEnableInstructionScreen = false/true
-         recorder.isEnablePreviewScreen = false/true
-         present(recorder, animated: true)
-         inputParam.removeAll()
-          }
+           let recorder = ScreenNavigationViewController(delegate: self)
+           recorder.modalPresentationStyle = .fullScreen
+           recorder.recordingNodeName = nodeNameArray
+           recorder.nodeData = inputParam
+           recorder.recordingType = VidusInput.RecordingType.screen.rawValue
+           recorder.licenceKey = "ENTER LICENCE KEY"
+           recorder.serverHeader = "ENTER SERVER_HEADER"
+           recorder.referenceID = "ENTER_SERVER_REFERENCE_ID"
+           recorder.isEnableInstructionScreen = false/true
+           recorder.isEnablePreviewScreen = false/true
+           present(recorder, animated: true)
+           inputParam.removeAll()
+         }
     }
     
     // ...    
