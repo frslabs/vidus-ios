@@ -419,11 +419,11 @@ Captures a video recording with a user defined time.
   </tr>
   <tr>
   <td><b>nodeParameters[VidusInput.SDKInputParameter.fileTemplate.rawValue] = </b>languageTemplatePath</td>
-  <td>sets the language for text e.g. For English langauge code is "en-IN" and for Hindi code is "hi-IN".
+  <td>sets the language template path".
   </tr>
   <tr>
   <td><b>nodeParameters[VidusInput.SDKInputParameter.titleTemplate.rawValue] = </b>questionTemplatePath</td>
-  <td>Sets the question text.</td>
+  <td>Sets the question data text.</td>
   <tr>
   <tr>
  </table>
