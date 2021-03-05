@@ -113,11 +113,11 @@ class YourViewController: UIViewController,RecordingDelegate {
         
        addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil, questionID: nil,languageCode: "", questionTemplatePath: "")
        
-    // MARK: For PIV Node
+     // MARK: For PIV Node
     
        addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil, questionID: "Enter Question ID",languageCode: "", questionTemplatePath: "")
        
-        // MARK: For PIVC Node
+     // MARK: For PIVC Node
     
       addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVCNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil, languageCode: "ENTER LANGUAGE CODE", questionTemplatePath: "ENTER QUESTION JSON STRING")
        
@@ -212,9 +212,9 @@ class YourViewController: UIViewController,RecordingDelegate {
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
             break
-          case VidusInput.VidusInputNode.PIVCNode.rawValue:
-             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
-             inputParameters[VidusInput.SDKInputParameter.fileTemplate.rawValue] = languageCode
+         case VidusInput.VidusInputNode.PIVCNode.rawValue:
+            inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+            inputParameters[VidusInput.SDKInputParameter.fileTemplate.rawValue] = languageCode
             inputParameters[VidusInput.SDKInputParameter.titleTemplate.rawValue] = questionTemplatePath
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
@@ -244,7 +244,7 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 
 7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
 
-8. **[PIVC Node]
+8. **[PIVC Node](#pivc-node)**
 
 
 
@@ -405,6 +405,31 @@ Captures a video recording with a user defined time.
  </tr>
 </table>
 </div>
+
+#### PIVC Node
+
+<div>
+<table style="width:100%">
+  <tr>
+    <th bgcolor="#F1F1F1" colspan="2">Public Methods</th>
+  </tr>
+  <tr>
+    <td><b>nodeParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = </b>Nodename</td>
+    <td>Sets the Node name.</td>
+  </tr>
+  <tr>
+  <td><b>nodeParameters[VidusInput.SDKInputParameter.fileTemplate.rawValue] = </b>LanguageCode</td>
+  <td>sets the language for text eg: For English langauge code is "en-IN" and for Hindi code is "hi-IN".
+  </tr>
+  <tr>
+  <td><b>nodeParameters[VidusInput.SDKInputParameter.titleTemplate.rawValue] = </b>questionTemplatePath</td>
+  <td>Sets the question text.</td>
+  <tr>
+  <tr>
+ </table>
+ </div>
+
+
 
 
 ## Vidus Error Codes
