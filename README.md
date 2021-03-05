@@ -2,7 +2,7 @@
 ![version](https://img.shields.io/badge/version-v2.1.0-blue)
 
 
-The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.
+The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.Vidus is supporting English and Hindi languages.
 
 You can find the release history at [Changelog](CHANGELOG.md)
 
