@@ -158,7 +158,7 @@ class YourViewController: UIViewController,RecordingDelegate {
 ```swift
     // ...
     
-    func addNodeWithParam(nodeName:String,timeDuration:String?,baseUrl:String?,keyId:String?,keySecret:String?,messageText:String?,voiceType:String?,questionID:String?) {
+    func addNodeWithParam(nodeName:String,timeDuration:String?,baseUrl:String?,keyId:String?,keySecret:String?,messageText:String?,voiceType:String?,questionID:String?,languageCode:String?,questionTemplatePath:String?) {
         switch nodeName {
         case VidusInput.VidusInputNode.simpleRecorderNode.rawValue:
             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
