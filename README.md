@@ -91,31 +91,36 @@ class YourViewController: UIViewController,RecordingDelegate {
       
       // MARK:  For Simple Node
        
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: nil,      keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.simpleRecorderNode.rawValue, timeDuration: "10", baseUrl: nil,      keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil,languageCode: "", questionTemplatePath: "")
      
       // MARK:  For Challenge Code Node
        
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeCodeNode.rawValue, timeDuration: nil, baseUrl: "Base_URL", keyId: "KEY_ID", keySecret: "KEY_SECRET", messageText: "Sample_Text", voiceType: nil, questionID: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeCodeNode.rawValue, timeDuration: nil, baseUrl: "Base_URL", keyId: "KEY_ID", keySecret: "KEY_SECRET", messageText: "Sample_Text", voiceType: nil, questionID: nil,languageCode: "", questionTemplatePath: "")
         
       // MARK:  For Challenge Text Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil, questionID: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.challengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: nil, questionID: nil,languageCode: "", questionTemplatePath: "")
         
       // MARK:  For Declaration Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: VidusInput.VoiceType.byMacine.rawValue, questionID: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.declarationNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: "Sample Text", voiceType: VidusInput.VoiceType.byMacine.rawValue, questionID: nil,languageCode: "", questionTemplatePath: "")
         
       // MARK:  For OSV Recorder Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVRecorderNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil,languageCode: "", questionTemplatePath: "")
         
       // MARK:  For OSV Challenge Node
         
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil, questionID: nil)
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.oSVChallengeTextNode.rawValue, timeDuration: "10", baseUrl: nil, keyId: nil, keySecret: nil, messageText: "sample text", voiceType: nil, questionID: nil,languageCode: "", questionTemplatePath: "")
        
-    // MARK: For PIVC Node
+    // MARK: For PIV Node
     
-       addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: nil,   keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil, questionID: "Enter Question ID")
+       addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: "Enter Key ID", keySecret: "Enter Key Secret", messageText: "Enter Text", voiceType: nil, questionID: "Enter Question ID",languageCode: "", questionTemplatePath: "")
+       
+        // MARK: For PIVC Node
+    
+      addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVCNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil, languageCode: "ENTER LANGUAGE CODE", questionTemplatePath: "ENTER QUESTION JSON STRING")
+       
           
     }
     
@@ -207,6 +212,12 @@ class YourViewController: UIViewController,RecordingDelegate {
             nodeNameArray.append(nodeName)
             inputParam.append(inputParameters)
             break
+          case VidusInput.VidusInputNode.PIVCNode.rawValue:
+             inputParameters[VidusInput.SDKInputParameter.nodeName.rawValue] = nodeName
+             inputParameters[VidusInput.SDKInputParameter.fileTemplate.rawValue] = languageCode
+            inputParameters[VidusInput.SDKInputParameter.titleTemplate.rawValue] = questionTemplatePath
+            nodeNameArray.append(nodeName)
+            inputParam.append(inputParameters)
         default:
             print("Error: Node is empty")
         }
@@ -232,6 +243,8 @@ Vidus SDK has APIs to capture interactive realtime selfie video with customizabl
 6. **[OSV Challenge Text Node](#osv-challenge-text-node)**
 
 7. **[PIV Node](#piv-node)** (Pre-Issuance Verification Node)
+
+8. **[PIVC Node]
 
 
 
@@ -407,7 +420,8 @@ Following error codes will be returned on the `onVidusFailure` method of the cal
 | 807  | Invalid Config         |
 | 808  | Transaction fail       |
 | 809  | Internet is not available             |
-| 810  | Screen recording permision deny             |
+| 810  | Timeout             |
+| 811  | Screen recording permision deny             |
 | 812  | Upload audio to server fail           |
 | 813  | Microphone permission deny            |
 | 814  | Upload screen images fail            |
