@@ -1,4 +1,10 @@
 # Changelog
+## **v2.3.0** - *05-03-2021*
+### What’s New
+- Added PIVC Node
+- Bug fixes.
+- Performance enhancement.
+
 ## **v2.1.0** - *29-05-2020*
 ### What’s New
 - Bug fixes.
