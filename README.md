@@ -118,7 +118,7 @@ class YourViewController: UIViewController,RecordingDelegate {
        
      // MARK: For PIVC Node
     
-      addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVCNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil, questionJsonString: "ENTER LANGUAGE CODE TEmplate Path", questionTemplateString: "ENTER JSON STRING")
+      addNodeWithParam(nodeName: VidusInput.VidusInputNode.PIVCNode.rawValue, timeDuration: nil, baseUrl: nil, keyId: nil, keySecret: nil, messageText: nil, voiceType: nil, questionID: nil, questionJsonString: "ENTER QUESTION STRING", questionTemplateString: "ENTER TEMPLATE JSON STRING")
        
           
     }
