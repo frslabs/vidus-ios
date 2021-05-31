@@ -1,4 +1,11 @@
 # Changelog
+## **v2.3.3** - *31-05-2021*
+### What’s New
+- Bug fixes.
+
+## **v2.3.2** - *03-05-2021*
+### What’s New
+- Bug fixes.
 
 ## **v2.3.1** - *19-04-2021*
 ### What’s New
