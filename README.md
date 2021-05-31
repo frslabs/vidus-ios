@@ -1,5 +1,5 @@
 # VIDUS iOS SDK
-![version](https://img.shields.io/badge/version-v2.3.1-blue)
+![version](https://img.shields.io/badge/version-v2.3.3-blue)
 
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.Vidus is supporting English and Hindi languages.
@@ -50,7 +50,7 @@ source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '12.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'VIDUS', '2.3.1'
+pod 'VIDUS', '2.3.3'
 pod 'Alamofire', '~> 4.9.1'
 end
 ```
