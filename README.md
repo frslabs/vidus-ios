@@ -24,10 +24,9 @@ Depending on the license - offline or online - you have opted for, the ping func
 
 Once you have the license , follow the below instructions for a successful integration of Vidus SDK onto your iOS Application.
 
-## Requirements
-
-- Swift 5.0
-- iOS 11.0+
+## Minimum Requirements
+- xcode 12.5
+- iOS 12.0+
 
 ## Permission
 
