@@ -1,10 +1,12 @@
 # VIDUS iOS SDK
-![version](https://img.shields.io/badge/version-v2.3.3-blue)
+![version](https://img.shields.io/badge/version-v2.3.4-blue)
 
 
 The Vidus SDK comes with a set of screens and configurations to record live video of customers. Each of the recording options in the SDK are called nodes which can be configured by developers.Vidus is supporting English and Hindi languages.
 
 You can find the release history at [Changelog](CHANGELOG.md)
+
+‼ ATTENTION ‼ → BREAKING CHANGE introduced at VIDUS SDK `v2.3.4`. We have introduced a new license format. If you are using versions prior to `v2.3.4` and intend to update to `v2.3.4` or above please contact `support@frslabs.com` for an updated license.
 
 # Table Of Content
 
@@ -25,8 +27,9 @@ Depending on the license - offline or online - you have opted for, the ping func
 Once you have the license , follow the below instructions for a successful integration of Vidus SDK onto your iOS Application.
 
 ## Minimum Requirements
-- xcode 12.5
-- iOS 12.0+
+- xcode 13
+- iOS 13.0+
+- Swift 5.0
 
 ## Permission
 
@@ -46,10 +49,10 @@ To integrate **Vidus** into your Xcode project using CocoaPods, specify it in yo
 ```
 source 'https://gitlab.com/frslabs-public/ios/vidus.git'
 source 'https://github.com/CocoaPods/Specs.git'
-platform :ios, '12.0'
+platform :ios, '13.0'
 target '<Your Target Name>' do
 use_frameworks!
-pod 'VIDUS', '2.3.3'
+pod 'VIDUS', '2.3.4'
 pod 'Alamofire', '~> 4.9.1'
 end
 ```
