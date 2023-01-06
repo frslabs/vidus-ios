@@ -57,11 +57,22 @@ pod 'Alamofire', '~> 4.9.1'
 end
 ```
 
-Then, run the following command:
+###### Save/Edit Netrc settings to install custom pod
 
-```bash
-$ pod install
+You will need a valid netrc credentials to install vidus from maven, which can be obtained by contacting `support@frslabs.com`. 
+
+1. Create or edit .netrc file under current user's home directory.
+2. Write the below lines into that file, replace <YOUR_USERNAME> and <YOUR_PASSWORD> with your credentials which is shared through email and save the file.
+```ruby
+machine vidus-sdk-ios.repo.frslabs.space
+login <YOUR_USERNAME>
+password <YOUR_PASSOWRD>
 ```
+3. In terminal enter below command to install the pod
+
+"pod install" or "pod update" or "pod install --repo-update".
+
+4. Connect with physical device to build and run Forus, It will not build/run in simulator due to camera dependency.
 
 ## Getting Started
 
