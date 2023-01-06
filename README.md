@@ -46,7 +46,7 @@ In Info.plist file add following code to allow your application to access iPhone
 
 To integrate **Vidus** into your Xcode project using CocoaPods, specify it in your `Podfile`:
 
-```
+```ruby
 source 'https://gitlab.com/frslabs-public/ios/vidus.git'
 source 'https://github.com/CocoaPods/Specs.git'
 platform :ios, '13.0'
