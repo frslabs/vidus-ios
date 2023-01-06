@@ -1,5 +1,6 @@
 # Changelog
 ## **v2.3.4** - *06-01-2023*
+### What’s New
 - Swift & Xcode 14.2 version update.
 - Support from iOS 13.
 - Bug fixes.
