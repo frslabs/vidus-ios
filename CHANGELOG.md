@@ -1,4 +1,8 @@
 # Changelog
+
+## **v2.4.0** - *08-09-2023*
+- Update transaction API.
+
 ## **v2.3.4** - *06-01-2023*
 ### What’s New
 - Swift & Xcode 14.2 version update.
